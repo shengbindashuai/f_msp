@@ -2,7 +2,7 @@
 
 # This script is used for Stage 1 training of Orion-BiX with rowmixer_lite_icl model
 
-torchrun --standalone --nproc_per_node=8 -m orion_msp.train.run \
+torchrun --standalone --nproc_per_node=8 /vast/users/guangyi.chen/causal_group/zijian.li/dmir_crl/f_msp/Orion-MSP-main/src/orion_msp/train/run.py \
             --model rowmixer_lite_icl \
             --device cuda \
             --amp true \
@@ -14,7 +14,7 @@ torchrun --standalone --nproc_per_node=8 -m orion_msp.train.run \
             --scheduler cosine_warmup \
             --warmup_proportion 0.01 \
             --gradient_clipping 1.0 \
-            --checkpoint_dir checkpoints/rowmixer_lite_icl \
+            --checkpoint_dir ./checkpoints/rowmixer_lite_icl \
             --max_classes 10 \
             --prior_type mix_scm \
             --prior_device cpu \
@@ -40,5 +40,4 @@ torchrun --standalone --nproc_per_node=8 -m orion_msp.train.run \
             --rowmixer_shuffle_p 0.25 \
             --save_temp_every 50 \
             --save_perm_every 1000 \
-            --wandb_log False \
-            --checkpoint_path "/home/hzf00006536/fjt/tabicl-main/tabicl-main/checkpoints/rowmixer_lite_icl/step-3100.ckpt"
+            --wandb_log False
