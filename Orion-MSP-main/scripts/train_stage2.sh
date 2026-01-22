@@ -18,7 +18,7 @@ torchrun  --nproc_per_node=8 /vast/users/guangyi.chen/causal_group/zijian.li/dmi
             --np_seed 42 \
             --torch_seed 42 \
             --max_steps 20000 \
-            --batch_size 256 \
+            --batch_size 512 \
             --micro_batch_size 1 \
             --lr 0.75e-4 \
             --scheduler cosine_warmup \
