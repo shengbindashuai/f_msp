@@ -13,11 +13,11 @@ torchrun --nproc_per_node=8 /vast/users/guangyi.chen/causal_group/zijian.li/dmir
             --device cuda \
             --amp true \
             --dtype float32 \
-            --max_steps 10000 \
+            --max_steps 2000 \
             --batch_size 256 \
             --micro_batch_size 2 \
             --lr 1.0e-4 \
-            --scheduler cosine_warmup \
+            --scheduler polynomial_decay_warmup \
             --warmup_proportion 0.01 \
             --gradient_clipping 1.0 \
             --checkpoint_dir ./checkpoints/rowmixer_lite_iclStage2 \
@@ -45,5 +45,5 @@ torchrun --nproc_per_node=8 /vast/users/guangyi.chen/causal_group/zijian.li/dmir
             --rowmixer_patch_size 8 \
             --rowmixer_shuffle_p 0.25 \
             --save_temp_every 50 \
-            --checkpoint_path ./checkpoints/rowmixer_lite_iclStage2/step-12000.ckpt \
+            --checkpoint_path ./checkpoints/rowmixer_lite_iclStage/step-12000.ckpt \
             --save_perm_every 1000
