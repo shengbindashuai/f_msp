@@ -2,6 +2,7 @@
 
 # This script is used for Stage 1 training of Orion-BiX with rowmixer_lite_icl model
 
+#offline-run-20260124_175942-pn67q39c
 torchrun --nproc_per_node=8 /vast/users/guangyi.chen/causal_group/zijian.li/dmir_crl/f_msp/Orion-MSP-main/src/orion_msp/train/run.py \
             --wandb_log True \
             --model rowmixer_lite_icl \
@@ -16,7 +17,7 @@ torchrun --nproc_per_node=8 /vast/users/guangyi.chen/causal_group/zijian.li/dmir
             --max_steps 18000 \
             --batch_size 256 \
             --micro_batch_size 2 \
-            --lr 1.0e-4 \
+            --lr 1e-4 \
             --scheduler polynomial_decay_warmup \
             --warmup_proportion 0.01 \
             --gradient_clipping 1.0 \
