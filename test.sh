@@ -3,7 +3,7 @@ set -euo pipefail  # 开启严格模式，遇到错误立即退出，捕获未�
 
 # ======================== 配置区 (请根据实际情况修改) ========================
 # 要遍历的RowMixer ckpt文件根目录（核心修改：替换的是这个目录下的ckpt）
-ROW_MIXER_CKPT_ROOT="/vast/users/guangyi.chen/causal_group/zijian.li/dmir_crl/f_msp/Orion-MSP-main/checkpoints/rowmixer_lite_iclStage2"
+ROW_MIXER_CKPT_ROOT="/vast/users/guangyi.chen/causal_group/zijian.li/dmir_crl/f_msp/Orion-MSP-main/checkpoints/rowmixer_lite_icl"
 # 固定的Mantis checkpoint路径
 MANTIS_CKPT="/vast/users/guangyi.chen/causal_group/zijian.li/dmir_crl/test-TIC/TIC-FS/code/checkpoints/CaukerImpro-data100k_emb512_100epochs.pt"
 # 评估脚本路径
