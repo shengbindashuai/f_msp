@@ -22,6 +22,6 @@ python "${EVAL_SCRIPT}" \
     --rowmixer-ckpt "${ROW_MIXER_CKPT}" \
     --use-var-selector \
     --var-num-channels 10 \
-    --mantis-batch-size 32 \
-    --rowmixer-batch-size 16 \
+    --mantis-batch-size 16 \
+    --rowmixer-batch-size 1 \
     --mantis-ckpt "${MANTIS_CKPT}"
