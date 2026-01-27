@@ -14,7 +14,7 @@ UEA_PATH="/vast/users/guangyi.chen/causal_group/zijian.li/dmir_crl/test-TIC/TIC-
 # 可用的GPU卡号 (8卡，可根据实际情况调整)
 GPU_IDS=(0 1 2 3 4 5 6 7)
 # 每个GPU并行运行的任务数 (根据GPU显存调整，默认1)
-TASKS_PER_GPU=3
+TASKS_PER_GPU=1
 # 日志输出目录
 LOG_DIR="./rowmixer_logs"
 # ===============================================================================
